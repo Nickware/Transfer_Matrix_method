@@ -5,8 +5,8 @@ lambda=0.1879E-6:1.9370E-6; % la longitud de onda aqui esta dada en
 %ejemplo el BK7 arranca desde 0.300 micrometros y va hasta 2.500 nanometros
 %¿hay algun problema con eso?
 
-capas:{"BK7Lambda,n","AuLambda,n","AuLambda,k","AirLambda,n"}; %nose si deba colocar esas comillas y el ; al final
-espesor:{"100000","0,04E-6","0,04E-6","100000"} % el espesor de las capas inicial y final se considera como infinito y el espesor de la capa de Au
+capas={'BK7Lambda,n','AuLambda,n','AuLambda,k','AirLambda,n'}; %nose si deba colocar esas comillas y el ; al final
+espesor={'100000','0,04E-6','0,04E-6','100000'}; % el espesor de las capas inicial y final se considera como infinito y el espesor de la capa de Au
 %lo tome como 40 nanometros o 0,04micrometros
 
 %aqui coloco las funciones que muestra refractive index 
