@@ -1,7 +1,6 @@
-url_database ='http://refractiveindex.info/download/database/rii-database-2016-12-03.zip';
-%ncmFiles = unzip(url, 'database')
-url_yaml ='https://github.com/ewiger/yamlmatlab/archive/master.zip';
-descomprimir_datbase = unzip(url_database)
+url_database = urlwrite('http://refractiveindex.info/download/database/rii-database-2016-12-03/','rii-database-2016-12-03.zip');
+descomprimir_database = unzip(url_database)
+url_yaml =urlwrite('https://github.com/ewiger/yamlmatlab/archive/','master.zip');
 descomprimir_yaml = unzip(url_yaml)
 cd yamlmatlab
 data = ReadYaml('../database/library.xml')
@@ -13,8 +12,8 @@ lambda=0.1879E-6:1.9370E-6; % la longitud de onda aqui esta dada en
 %ejemplo el BK7 arranca desde 0.300 micrometros y va hasta 2.500 nanometros
 %hay algun problema con eso?
 
-#capas={'BK7Lambda,n','AuLambda,n','AuLambda,k','AirLambda,n'}; %nose si deba colocar esas comillas y el ; al final
-#espesor={'100000','0,04E-6','0,04E-6','100000'}; % el espesor de las capas inicial y final se considera como infinito y el espesor de la capa de Au
+capas={'BK7Lambda,n','AuLambda,n','AuLambda,k','AirLambda,n'}; %nose si deba colocar esas comillas y el ; al final
+espesor={'100000','0,04E-6','0,04E-6','100000'}; % el espesor de las capas inicial y final se considera como infinito y el espesor de la capa de Au
 %lo tome como 40 nanometros o 0,04micrometros
 
 %aqui coloco las funciones que muestra refractive index 
