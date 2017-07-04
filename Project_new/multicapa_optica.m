@@ -1,10 +1,10 @@
-url_database = urlwrite('http://refractiveindex.info/download/database/rii-database-2016-12-03/','rii-database-2016-12-03.zip');
+url_database = urlwrite("http://refractiveindex.info/download/database/rii-database-2016-12-03", "rii-database-2016-12-03.zip");
 descomprimir_database = unzip(url_database)
 url_yaml =urlwrite('https://github.com/ewiger/yamlmatlab/archive/','master.zip');
 descomprimir_yaml = unzip(url_yaml)
 cd yamlmatlab
 data = ReadYaml('../database/library.xml')
-
+exit 
 funcion parametros
 lambda=0.1879E-6:1.9370E-6; % la longitud de onda aqui esta dada en 
 %micrometros de acuerdo a la tabla de datos, tome ese intervalo porque es el del metal Au, 
