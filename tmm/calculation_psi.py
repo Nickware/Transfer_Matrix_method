@@ -4,9 +4,9 @@
 # The results are plotted, showing how Psi and Delta change with the thickness of the SiO2 layer.
 # The plot shows that as the thickness of the SiO2 layer increases, both Psi and Delta angles change, indicating the influence of the layer on the ellipsometric measurements.
 # The code uses the TMM (Transfer Matrix Method) to compute the ellipsometric angles Psi and Delta for a system with air, SiO2, and Si, varying the thickness of the SiO2 layer.    
-# This example its based on the example from the book "Optical waves in layered media" by Pochi and Pochi Yeh, 1983, Wiley.
-# This example is the copy of the examples of the repository https://github.com/sbyrnes321/tmm
-# Should agree with Handbook of Ellipsometry by Paul H. Holloway, 2009, SPIE Press.
+# This example is based on the example from the book "Optical waves in layered media" by Pochi and Pochi Yeh, 1983, Wiley.
+# This example is a copy of the examples of the repository https://github.com/sbyrnes321/tmm
+# Should agree with Handbook of Ellipsometry by Tompkins, 2005.
 
 
 # import necessary libraries 
