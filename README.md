@@ -1,20 +1,19 @@
-# Optics
-## Repositorio Optics
+## Optics
 
-Este repositorio **Nickware/Optics**, emplea librerias como `tmm` (Transfer Matrix Method). Incluye los siguientes elementos y funcionalidades:
+Este repositorio se enfoca en optica, emplea librerias de python como `tmm` (Transfer Matrix Method). Los scripts Incluye los siguientes elementos y funcionalidades:
 
 ### 1. Scripts de simulación óptica
 
-- **Cálculo de reflexión y transmisión:** Scripts para calcular la fracción de luz reflejada y transmitida en sistemas multicapa usando el método de matrices de transferencia.
+- **Cálculo de reflexión y transmisión:** Implementaciones para calcular la fracción de luz reflejada y transmitida en sistemas multicapa usando el método de matrices de transferencia.
 - **Modelado de películas delgadas:** Ejemplos que simulan la propagación de luz en películas delgadas y estructuras multicapa, considerando diferentes materiales y espesores.
 - **Simulación de elipsometría:** Cálculo de ángulos elipsométricos (Psi y Delta) para analizar la respuesta óptica de capas delgadas.
 - **Cálculo de absorción local:** Herramientas para determinar la absorción de luz en diferentes posiciones dentro de la estructura multicapa.
-- **Visualización:** Gráficas de los resultados de simulaciones (por ejemplo, transmisión vs. longitud de onda, reflexión vs. ángulo de incidencia).
+- **Visualización:** Resultados de simulaciones (por ejemplo, transmisión vs. longitud de onda, reflexión vs. ángulo de incidencia).
 
 
 ### 2. Ejemplos y documentación
 
-- **Ejemplos prácticos:** Scripts inspirados en problemas clásicos de óptica, como los presentados en libros de referencia (por ejemplo, *Optical Waves in Layered Media* de Pochi Yeh).
+- **Ejemplos prácticos:** Scripts inspirados en problemas clásicos de óptica, presentados en textos de referencia (por ejemplo, *Optical Waves in Layered Media* de Pochi Yeh).
 - **Referencias a la librería original:** Notas que indiquen que los ejemplos están basados o adaptados de la librería `tmm` original y su documentación.
 - **README detallado:** Explicación sobre el propósito del repositorio, instrucciones de uso y dependencias necesarias (como `numpy`, `matplotlib` y la propia `tmm`).
 
