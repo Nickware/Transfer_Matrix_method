@@ -48,7 +48,7 @@ V3 = zeros(size(x3));
 xx = [x1 x2 x3];
 VV = [V1 V2 V3];
 
-% --- Trama ---
+% --- Gráfica ---
 plot(xx, real([psi1 psi2 psi3]), 'b-', 'LineWidth', 1.2); hold on;
 plot(xx, VV, 'k--', 'LineWidth', 2);
 xlabel('x'); ylabel('\psi(x) and V(x)');
