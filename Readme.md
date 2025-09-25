@@ -16,7 +16,7 @@ En resumen, el método de matriz de transferencia es una herramienta poderosa pa
 
 # Empleo del Método de Matriz de Transferencia
 
-El método de matriz de transferencia es una herramienta poderosa usada para resolver una amplia variedad de problemas físicos, especialmente en sistemas que pueden dividirse en secciones o capas, donde las soluciones pueden combinarse a través de operaciones matriciales. Aquí te resumo los principales problemas físicos que pueden abordarse con este método:
+El método de matriz de transferencia es una herramienta poderosa usada para resolver una amplia variedad de problemas físicos, especialmente en sistemas que pueden dividirse en secciones o capas, donde las soluciones pueden combinarse a través de operaciones matriciales. Aquí se resume los principales problemas físicos que pueden abordarse con este método:
 
 ***
 
