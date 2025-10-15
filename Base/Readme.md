@@ -10,77 +10,75 @@ El **Método de Matriz de Transferencia (TMM)** es una técnica poderosa y efici
 
 Para cada medio, la impedancia característica se define como:
 
-\[
+$\[
 Z_i = \rho_i \cdot c_i
-\]
+\]$
 
 donde:
-- \(\rho_i\) = densidad del medio \(i\)
-- \(c_i\) = velocidad de propagación en el medio \(i\)
+- $\(\rho_i\)$ = densidad del medio $\(i\)$
+- $\(c_i\)$ = velocidad de propagación en el medio $\(i\)$
 
 ### Número de Onda
 
 El número de onda en cada medio está dado por:
 
-\[
+$\[
 k_i = \frac{\omega}{c_i} = \frac{2\pi f}{c_i}
-\]
+\]$
 
 donde:
-- \(\omega\) = frecuencia angular
-- \(f\) = frecuencia lineal
+- $\(\omega\)$ = frecuencia angular
+- $\(f\)$ = frecuencia lineal
 
 ### Matriz de Transferencia para una Capa
 
-Para una capa de espesor \(d\), la matriz de transferencia es:
+Para una capa de espesor $\(d\)$, la matriz de transferencia es:
 
-\[
-M_i = \begin{bmatrix}
-\cos(k_i d_i) & jZ_i\sin(k_i d_i) \\
+$\[M_i = \begin{bmatrix}
+\cos(k_i d_i) & jZ_i\sin(k_i d_i) 
 \frac{j}{Z_i}\sin(k_i d_i) & \cos(k_i d_i)
-\end{bmatrix}
-\]
+\end{bmatrix}\]$
 
 ### Sistema Multicapa
 
-Para un sistema de \(N\) capas, la matriz total es el producto de las matrices individuales:
+Para un sistema de $\(N\)$ capas, la matriz total es el producto de las matrices individuales:
 
-\[
+$\[
 M_{\text{total}} = M_1 \cdot M_2 \cdot \ldots \cdot M_N
-\]
+\]$
 
 ### Coeficientes de Reflexión y Transmisión
 
 Los coeficientes se calculan como:
 
-\[
+$\[
 R = \frac{A\cdot Z_{\text{derecha}} + B - C\cdot Z_{\text{izquierda}}\cdot Z_{\text{derecha}} - D\cdot Z_{\text{izquierda}}}{A\cdot Z_{\text{derecha}} + B + C\cdot Z_{\text{izquierda}}\cdot Z_{\text{derecha}} + D\cdot Z_{\text{izquierda}}}
-\]
+\]$
 
-\[
+$\[
 T = \frac{2\cdot Z_{\text{derecha}}}{A\cdot Z_{\text{derecha}} + B + C\cdot Z_{\text{izquierda}}\cdot Z_{\text{derecha}} + D\cdot Z_{\text{izquierda}}}
-\]
+\]$
 
-donde \(A, B, C, D\) son los elementos de \(M_{\text{total}}\).
+donde $\(A, B, C, D\) son los elementos de \(M_{\text{total}}\).$
 
 ## Implementación
 
 ### Estructura de Datos
 
 Cada capa se define mediante:
-- Densidad (\(\rho\))
-- Velocidad de propagación (\(c\))
-- Espesor (\(d\))
+- Densidad $(\(\rho\))$
+- Velocidad de propagación $(\(c\))$
+- Espesor $(\(d\))$
 - Nombre (opcional)
 
 ### Algoritmo Principal
 
 1. **Inicialización**: Definir frecuencias de interés y propiedades de las capas
-2. **Cálculo de impedancias**: \(Z_i = \rho_i \cdot c_i\)
-3. **Cálculo de números de onda**: \(k_i = \frac{2\pi f}{c_i}\)
+2. **Cálculo de impedancias**: $\(Z_i = \rho_i \cdot c_i\)$
+3. **Cálculo de números de onda**: $\(k_i = \frac{2\pi f}{c_i}\)$
 4. **Construcción de matrices**: Para cada capa a cada frecuencia
 5. **Multiplicación de matrices**: Obtener la matriz total del sistema
-6. **Cálculo de coeficientes**: Obtener \(R\) y \(T\) para cada frecuencia
+6. **Cálculo de coeficientes**: Obtener $\(R\)$ y $\(T\)$ para cada frecuencia
 
 ## Código Ejemplo
 
@@ -178,11 +176,11 @@ El método permite visualizar:
 ### Medios con Pérdidas
 Incorporar atenuación mediante un número de onda complejo:
 
-\[
+$\[
 k = \frac{\omega}{c} + j\alpha
-\]
+\]$
 
-donde \(\alpha\) es el coeficiente de atenuación.
+donde $\(\alpha\)$ es el coeficiente de atenuación.
 
 ### Incidencia Oblícua
 Modificar las matrices para ángulos de incidencia no normales.
@@ -223,7 +221,7 @@ R, T = tmm.solve()
 
 ## Interpretación de Resultados
 
-- \(|R|^2 + |T|^2 = 1\) (conservación de energía)
+- $\(|R|^2 + |T|^2 = 1\)$ (conservación de energía)
 - Picos en la transmisión indican resonancias
 - Valles en la transmisión indican interferencia destructiva
 - La fase proporciona información sobre retardos temporales
