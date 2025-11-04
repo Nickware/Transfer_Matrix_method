@@ -74,8 +74,9 @@ El Método de Matriz de Transferencia (TMM) resuelve exactamente la ecuación de
 
 - **Impedancia acústica**: $\( Z = \rho c \)$
 - **Número de onda**: $\( k = \frac{\omega}{c} \)$
-- **Matriz de transferencia** para cada capa:
-  $\[M = \begin{bmatrix} \cos(kd) & jZ\sin(kd) \\ \frac{j}{Z}\sin(kd) & \cos(kd)\end{bmatrix}$}\]$
+  - **Matriz de transferencia** para cada capa:
+    ![](/home/jntorresr/Pictures/Screenshots/Screenshot from 2025-11-03 21-33-32.png)
+
 - **Coeficientes de reflexión/transmisión** a partir del producto de matrices
 
 ## Referencias
