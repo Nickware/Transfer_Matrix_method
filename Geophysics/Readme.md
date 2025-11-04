@@ -1,6 +1,6 @@
 # Modelado Sísmico con Método de Matriz de Transferencia (TMM)
 
-Este proyecto implementa una simulación de propagación de ondas sísmicas a través de capas terrestres con diferentes propiedades utilizando el Método de Matriz de Transferencia (TMM). El modelo calcula los coeficientes de transmisión y reflexión para diferentes frecuencias, proporcionando insights valiosos sobre el comportamiento de las ondas sísmicas en estructuras multicapa.
+Este proyecto implementa una simulación de propagación de ondas sísmicas a través de capas terrestres con diferentes propiedades mediante el Método de Matriz de Transferencia (TMM). El modelo calcula los coeficientes de transmisión y reflexión para diferentes frecuencias, proporcionando insights valiosos sobre el comportamiento de las ondas sísmicas en estructuras multicapa.
 
 ## Características Principales
 
@@ -72,15 +72,10 @@ Este modelo es útil para:
 
 El Método de Matriz de Transferencia (TMM) resuelve exactamente la ecuación de onda para sistemas multicapa calculando:
 
-- **Impedancia acústica**: \( Z = \rho c \)
-- **Número de onda**: \( k = \frac{\omega}{c} \)
+- **Impedancia acústica**: $\( Z = \rho c \)$
+- **Número de onda**: $\( k = \frac{\omega}{c} \)$
 - **Matriz de transferencia** para cada capa:
-  \[
-  M = \begin{bmatrix}
-  \cos(kd) & jZ\sin(kd) \\
-  \frac{j}{Z}\sin(kd) & \cos(kd)
-  \end{bmatrix}
-  \]
+  $\[M = \begin{bmatrix} \cos(kd) & jZ\sin(kd) \\ \frac{j}{Z}\sin(kd) & \cos(kd)\end{bmatrix}$}\]$
 - **Coeficientes de reflexión/transmisión** a partir del producto de matrices
 
 ## Referencias
