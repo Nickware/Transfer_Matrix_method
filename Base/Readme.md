@@ -34,7 +34,7 @@ donde:
 
 Para una capa de espesor $\(d\)$, la matriz de transferencia es:
 
-![](/home/jntorresr/Pictures/Screenshots/Screenshot from 2025-11-03 21-33-32.png)
+![](image/matriz.png)
 
 ### Sistema Multicapa
 
