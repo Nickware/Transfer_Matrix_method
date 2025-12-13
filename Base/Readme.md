@@ -232,7 +232,3 @@ Las contribuciones son bienvenidas. Por favor:
 4. Commit sus cambios
 5. Push a la rama
 6. Abra un Pull Request
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Vea el archivo `LICENSE` para más detalles.
