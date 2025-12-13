@@ -93,11 +93,6 @@ Las contribuciones son bienvenidas. Por favor:
 3. Commit sus cambios (`git commit -m 'Add AmazingFeature'`)
 4. Push a la rama (`git push origin feature/AmazingFeature`)
 5. Abrir un Pull Request
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Vea el archivo `LICENSE` para más detalles.
-
 ---
 
 **Nota**: Este modelo es una simplificación con fines educativos. Para aplicaciones sismológicas profesionales, se recomienda utilizar software especializado y validar los resultados con datos empíricos.
