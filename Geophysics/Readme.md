@@ -87,7 +87,7 @@ El Método de Matriz de Transferencia (TMM) resuelve exactamente la ecuación de
 
 ## Contribuciones
 
-Las contribuciones son bienvenidas. Por favor:
+Las contribuciones son bienvenidas. 
 1. Hacer fork del proyecto
 2. Crear una rama para su característica (`git checkout -b feature/AmazingFeature`)
 3. Commit sus cambios (`git commit -m 'Add AmazingFeature'`)
