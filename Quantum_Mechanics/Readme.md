@@ -7,12 +7,12 @@ Este script resuelve la ecuación de Schrödinger independiente del tiempo para 
 ## Características
 
 - **Implementa el método de matriz de transferencia:** permite acoplar soluciones en regiones con diferentes potenciales de forma eficiente.
-- **Perfil configurable:** puedes modificar la energía, la altura y el ancho de la barrera fácilmente en los parámetros del script.
+- **Perfil configurable:** puede modificar la energía, la altura y el ancho de la barrera fácilmente en los parámetros del script.
 - **Visualización clara:** gráfica en la misma figura la parte real de la función de onda y el perfil del potencial.
 
 ## Uso
 
-1. **Abre Octave** y copia el código en un archivo, por ejemplo `barrera_transferencia.m`.
+1. **Abre Octave** y copia el código en un archivo, por ejemplo, `barrera_transferencia.m`.
 2. **Ejecuta el script** en Octave:
    ```
    barrera_transferencia
@@ -32,8 +32,8 @@ Puedes experimentar con estos valores para observar cómo cambian la transmisió
 ## Conceptos importantes
 
 - **Unidad natural:** el script utiliza unidades atómicas ($$\hbar=1$$, $$m=1/2$$) para simplificar la notación.
-- **Coeficientes:** puedes agregar cálculos de coeficientes de transmisión y reflexión expandiendo el script a partir de las amplitudes calculadas.
-- **Generalización:** para múltiples barreras o potenciales arbitrarios, podrías adaptar la construcción de matrices de transferencia.
+- **Coeficientes:** puede agregar cálculos de coeficientes de transmisión y reflexión expandiendo el script a partir de las amplitudes calculadas.
+- **Generalización:** para múltiples barreras o potenciales arbitrarios, se podría adaptar la construcción de matrices de transferencia.
 
 ## Dependencias
 
