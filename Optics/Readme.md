@@ -36,4 +36,4 @@ Este repositorio está orientado al estudio y simulación de fenómenos ópticos
 - Los scripts están diseñados tanto para ilustrar conceptos teóricos como para servir de base para simulaciones ópticas en investigación o docencia.
 - Se recomienda tener correctamente instalado el módulo `tmm` para ejecutar los ejemplos.
 
-En resumen, el repositorio ofrece ejemplos prácticos y didácticos para simular y analizar fenómenos ópticos en sistemas multicapa, con un enfoque fuerte en la aplicación del método de matrices de transferencia y la visualización de resultados.
+El repositorio ofrece ejemplos prácticos y didácticos para simular y analizar fenómenos ópticos en sistemas multicapa, con un enfoque fuerte en la aplicación del método de matrices de transferencia y la visualización de resultados.
