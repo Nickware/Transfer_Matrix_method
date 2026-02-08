@@ -225,14 +225,10 @@ R, T = tmm.solve()
 
 ## Contribuciones
 
-Las contribuciones son bienvenidas. Por favor:
+Las contribuciones son bienvenidas. 
 1. Revise los issues existentes
 2. Haga fork del proyecto
 3. Cree una rama para su característica
 4. Commit sus cambios
 5. Push a la rama
 6. Abra un Pull Request
-
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Vea el archivo `LICENSE` para más detalles.
