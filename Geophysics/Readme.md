@@ -1,6 +1,6 @@
 # Modelado Sísmico con Método de Matriz de Transferencia (TMM)
 
-Este proyecto implementa una simulación de propagación de ondas sísmicas a través de capas terrestres con diferentes propiedades mediante el Método de Matriz de Transferencia (TMM). El modelo calcula los coeficientes de transmisión y reflexión para diferentes frecuencias, proporcionando insights valiosos sobre el comportamiento de las ondas sísmicas en estructuras multicapa.
+Este proyecto implementa una simulación de la propagación de ondas sísmicas a través de capas terrestres con diferentes propiedades mediante el Método de Matriz de Transferencia (TMM). El modelo calcula los coeficientes de transmisión y reflexión para diferentes frecuencias, proporcionando insights valiosos sobre el comportamiento de las ondas sísmicas en estructuras multicapa.
 
 ## Características Principales
 
@@ -14,28 +14,28 @@ Este proyecto implementa una simulación de propagación de ondas sísmicas a tr
 
 El modelo simula un perfil simplificado de la corteza terrestre con las siguientes capas:
 
-1. **Manto Superior**: Alta velocidad y densidad (medio semi-infinito de entrada)
-2. **Corteza Inferior**: Alta velocidad y densidad
-3. **Corteza Media**: Velocidad y densidad intermedias
-4. **Capa Sedimentaria**: Menor velocidad y densidad
-5. **Suelo Superior**: Baja velocidad y densidad
-6. **Aire**: Muy baja impedancia (medio semi-infinito de salida)
+- **Manto Superior**: Alta velocidad y densidad (medio semi-infinito de entrada)
+- **Corteza Inferior**: Alta velocidad y densidad
+- **Corteza Media**: Velocidad y densidad intermedias
+- **Capa Sedimentaria**: Menor velocidad y densidad
+- **Suelo Superior**: baja velocidad y densidad
+- **Aire**: Muy baja impedancia (medio semi-infinito de salida)
 
 ## Resultados y Análisis
 
 El modelo genera visualizaciones que muestran:
 
-1. **Estructura de capas**: Representación gráfica de las capas terrestres con sus propiedades
-2. **Coeficiente de transmisión**: Comportamiento de la transmisión en función de la frecuencia
-3. **Pérdida de transmisión**: Atenuación de la señal a diferentes frecuencias
-4. **Impedancia de capas**: Contrastes de impedancia que determinan la reflexión/transmisión
-5. **Respuesta en frecuencia**: Amplitud y fase de las ondas transmitidas y reflejadas
+- **Estructura de capas**: Representación gráfica de las capas terrestres con sus propiedades
+- **Coeficiente de transmisión**: Comportamiento de la transmisión en función de la frecuencia
+- **Pérdida de transmisión**: Atenuación de la señal a diferentes frecuencias
+- **Impedancia de capas**: Contrastes de impedancia que determinan la reflexión/transmisión
+- **Respuesta en frecuencia**: Amplitud y fase de las ondas transmitidas y reflejadas
 
 ### Hallazgos clave:
 - Las frecuencias bajas (< 2 Hz) se transmiten mejor a través de las capas
 - Existen picos de resonancia a frecuencias específicas
 - Las frecuencias altas (> 10 Hz) experimentan mayor atenuación
-- La mayor discontinuidad de impedancia ocurre entre el Suelo Superior y el Aire
+- La mayor discontinuidad de impedancia ocurre entre el suelo superior y el aire
 
 ## Instalación y Uso
 
