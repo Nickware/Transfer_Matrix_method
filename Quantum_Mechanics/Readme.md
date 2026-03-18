@@ -2,13 +2,13 @@
 
 ## Descripción
 
-Este script resuelve la ecuación de Schrödinger independiente del tiempo para una **barrera cuántica unidimensional (1D)** utilizando el **método de matriz de transferencia**. El objetivo es calcular y visualizar la función de onda asociada a una partícula de energía $$E$$ al incidir sobre una barrera rectangular de altura $$V_0$$ y ancho $$a$$. El resultado es una representación gráfica de la función de onda y el perfil del potencial, lo que permite analizar fenómenos como la reflexion y el tunelamiento cuántico.
+Este script resuelve la ecuación de Schrödinger independiente del tiempo para una **barrera cuántica unidimensional (1D)** utilizando el **método de matriz de transferencia**. El objetivo es calcular y visualizar la función de onda asociada a una partícula de energía $$E$$ al incidir sobre una barrera rectangular de altura $$V_0$$ y ancho $$a$$. El resultado es una representación gráfica de la función de onda y el perfil del potencial, lo que permite analizar fenómenos como la reflexión y el tunelamiento cuántico.
 
 ## Características
 
 - **Implementa el método de matriz de transferencia:** permite acoplar soluciones en regiones con diferentes potenciales de forma eficiente.
 - **Perfil configurable:** puede modificar la energía, la altura y el ancho de la barrera fácilmente en los parámetros del script.
-- **Visualización clara:** gráfica en la misma figura la parte real de la función de onda y el perfil del potencial.
+- **Visualización clara:** grafica en la misma figura la parte real de la función de onda y el perfil del potencial.
 
 ## Uso
 
@@ -24,7 +24,7 @@ Este script resuelve la ecuación de Schrödinger independiente del tiempo para 
 ## Parámetros Modificables
 
 - `E`  = Energía de la partícula.
-- `V0` = Altura de la barrera.
+- `V0` = altura de la barrera.
 - `a`  = Ancho de la barrera.
 
 Puedes experimentar con estos valores para observar cómo cambian la transmisión, la reflexión y el comportamiento de tunelamiento a través de la barrera.
@@ -38,7 +38,3 @@ Puedes experimentar con estos valores para observar cómo cambian la transmisió
 ## Dependencias
 
 - Octave GNU (recomendado: versión 6 o superior).
-
-## Créditos
-
-Elaborado con fines formativos para cursos de mecánica cuántica, física moderna y simulaciones de transporte cuántico.
