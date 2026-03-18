@@ -18,7 +18,7 @@ donde:
 - $\(\rho_i\)$ = densidad del medio $\(i\)$
 - $\(c_i\)$ = velocidad de propagación en el medio $\(i\)$
 
-### Número de Onda
+### Número de onda
 
 El número de onda en cada medio está dado por:
 
@@ -56,7 +56,7 @@ $\[
 T = \frac{2\cdot Z_{\text{derecha}}}{A\cdot Z_{\text{derecha}} + B + C\cdot Z_{\text{izquierda}}\cdot Z_{\text{derecha}} + D\cdot Z_{\text{izquierda}}}
 \]$
 
-donde $\(A, B, C, D\) son los elementos de \(M_{\text{total}}\).$
+Donde $\(A, B, C, D\) son los elementos de \(M_{\text{total}}\).$
 
 ## Implementación
 
@@ -177,7 +177,7 @@ $\[
 k = \frac{\omega}{c} + j\alpha
 \]$
 
-donde $\(\alpha\)$ es el coeficiente de atenuación.
+Donde $\(\alpha\)$ es el coeficiente de atenuación.
 
 ### Incidencia Oblícua
 Modificar las matrices para ángulos de incidencia no normales.
@@ -222,13 +222,3 @@ R, T = tmm.solve()
 - Picos en la transmisión indican resonancias
 - Valles en la transmisión indican interferencia destructiva
 - La fase proporciona información sobre retardos temporales
-
-## Contribuciones
-
-Las contribuciones son bienvenidas. 
-1. Revise los issues existentes
-2. Haga fork del proyecto
-3. Cree una rama para su característica
-4. Commit sus cambios
-5. Push a la rama
-6. Abra un Pull Request
