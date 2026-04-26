@@ -3,6 +3,34 @@
 % -> lana mineral (fluido equivalente simple) -> placa interior (masa superficial) -> aire interior
 % Calcula STL y nivel interior estimado frente a un espectro simplificado de ruido de aeronaves
 
+% Autor: [Tu Nombre]
+% Ultima actualizacion: [Fecha]
+
+% Nota: Este es un modelo simplificado para ilustrar el uso de TMM en una fachada de aeropuerto.
+% Se pueden agregar mas capas, detalles de geometria, perdidas adicionales, etc. para mayor realismo.
+% Requiere Octave o Matlab con funciones basicas de matriz y graficacion.
+% Salida: Graficas de STL y niveles, tabla de resultados en CSV, imagen esquematica de capas.
+% Para uso en el contexto de un caso de estudio de aeropuerto, se pueden ajustar los parametros y el espectro exterior segun datos reales o mediciones locales para obtener resultados mas precisos.
+% Se pueden comparar diferentes configuraciones de fachada, materiales, espesores, etc. para optimizar el diseño frente al ruido de aeronaves.
+% Este codigo es un punto de partida para explorar el impacto de diferentes capas y materiales en la reduccion del ruido en interiores frente a fuentes exteriores como las aeronaves.
+% Se recomienda validar los resultados con mediciones reales o software especializado para casos mas complejos o criticos.
+% Se pueden agregar efectos de difraccion, incidencia oblicua, acoplamiento estructural, etc. para mayor realismo si se desea.
+% Este modelo asume incidencia normal y no considera efectos de borde, difraccion, ni acoplamiento estructural entre capas, lo cual puede ser una simplificacion importante dependiendo del caso de estudio.
+% Se pueden agregar perdidas adicionales por friccion, absorcion en las capas, etc. para mayor realismo si se dispone de datos o modelos adecuados.
+% Se pueden comparar los resultados con criterios de aceptabilidad de ruido en interiores segun normativas locales o internacionales para evaluar el desempeño de la fachada frente al ruido de aeronaves.
+% Se pueden realizar analisis de sensibilidad variando los parametros de las capas, el espectro exterior, etc. para entender mejor el impacto de cada factor en la reduccion del ruido en interiores.
+% Se recomienda documentar claramente los parametros utilizados, las suposiciones del modelo, y las limitaciones para interpretar correctamente los resultados obtenidos con este enfoque simplificado.
+
+% Se pueden agregar comentarios adicionales en el codigo para explicar cada paso y facilitar su entendimiento y modificacion por parte de otros usuarios o para futuras referencias.
+% Se pueden agregar funciones adicionales para calcular indices globales de ruido, como el nivel de ruido equivalente continuo (Leq), el nivel de ruido ponderado A (dBA), etc. si se dispone de datos adecuados para el espectro exterior y se desea obtener resultados mas representativos del impacto del ruido en interiores.
+% Se pueden agregar efectos de acoplamiento entre capas, como la interaccion entre la masa superficial y la camara de aire, para obtener resultados mas realistas si se dispone de modelos adecuados para describir estos efectos.
+% Se pueden agregar efectos de difraccion en los bordes de la fachada, especialmente a bajas frecuencias, para obtener resultados mas realistas si se dispone de modelos adecuados para describir estos efectos.  
+% Se pueden agregar efectos de incidencia oblicua para obtener resultados mas realistas si se dispone de modelos adecuados para describir estos efectos, especialmente si la fuente de ruido no esta directamente frente a la fachada.  
+% Se pueden agregar efectos de acoplamiento estructural entre las capas, como la interaccion entre la masa superficial y la camara de aire, para obtener resultados mas realistas si se dispone de modelos adecuados para describir estos efectos.
+% Se pueden agregar efectos de absorcion en las capas, como la absorcion en la lana mineral, para obtener resultados mas realistas si se dispone de datos adecuados para describir estos efectos.
+% Se pueden agregar efectos de friccion en las capas, como la friccion en la camara de aire, para obtener resultados mas realistas si se dispone de datos adecuados para describir estos efecto
+% Se pueden agregar efectos de acoplamiento entre capas, como la interaccion entre la masa superficial y la camara de aire, para obtener resultados mas realistas si se dispone de modelos adecuados para describir estos efectos.
+
 clear; close all; clc;
 
 % -------------------------------
