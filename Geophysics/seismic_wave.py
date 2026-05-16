@@ -1,3 +1,18 @@
+# Seismic wave propagation through layered Earth model using Transfer Matrix Method (TMM)
+# Este código simula la propagación de ondas sísmicas a través de un modelo de capas terrestres utilizando el método de matriz de transferencia (TMM).
+# El modelo incluye varias capas con diferentes propiedades físicas (densidad, velocidad de onda P, espesor) y calcula los coeficientes de reflexión y transmisión, así como la pérdida por transmisión en función de la frecuencia.
+# Además, se visualizan las capas terrestres, los coeficientes de transmisión y reflexión, la pérdida por transmisión y la impedancia de cada capa.
+# Autor: [Tu Nombre]
+# Fecha: [Fecha de creación]
+# Requisitos:
+# - Python 3.x
+# - NumPy
+# - Matplotlib
+# Nota: Este código es un modelo simplificado y no incluye efectos como atenuación, anisotropía o acoplamiento entre ondas P y S. Para aplicaciones más avanzadas, se recomienda utilizar software especializado en sismología.
+# Importar bibliotecas necesarias
+# Este código es un modelo simplificado de propagación de ondas sísmicas a través de capas terrestres utilizando el método de matriz de transferencia (TMM). Se definen las propiedades de cada capa, se calculan los coeficientes de reflexión y transmisión, y se visualizan los resultados.
+# El modelo incluye un medio semi-infinito de entrada (manto superior) y un medio semi-infinito de salida (aire), con varias capas intermedias que representan la corteza terrestre y el suelo. Se generan gráficos para visualizar las capas, los coeficientes de transmisión y reflexión, la pérdida por transmisión y la impedancia de cada capa.
+# Para aplicaciones más avanzadas, se recomienda utilizar software especializado en sismología que incluya efectos como atenuación, anisotropía y acoplamiento entre ondas P y S.
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Rectangle
