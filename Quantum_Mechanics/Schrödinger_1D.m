@@ -1,6 +1,19 @@
 % Barrera cuántica utilizando el método de matriz de transferencia implementado en Octave
 % Script que resuelve la ecuación de Schrödinger independiente del tiempo para una barrera cuántica 1D 
 % utilizando el método de matriz de transferencia y mostrar la función de onda y el potencial gráficamente.
+% Autor: [Tu Nombre]
+% Nota: Asegúrate de tener Octave instalado para ejecutar este código.
+% Parámetros:
+% E: Energía de la partícula
+% V0: Altura de la barrera
+% a: Ancho de la barrera
+% El código calcula la función de onda en las tres regiones (izquierda, dentro de la barrera y derecha) y grafica el resultado junto con el perfil del potencial.
+% Para ejecutar, simplemente copia y pega este código en un archivo llamado 'Schrödinger_1D.m' y ejecútalo en Octave.
+% Puedes modificar los parámetros E, V0 y a para explorar diferentes configuraciones de la barrera cuántica.
+% Referencias:
+% - Griffiths, D. J. (2018). Introduction to Quantum Mechanics (3rd ed.). Cambridge University Press.
+% - Shankar, R. (2011). Principles of Quantum Mechanics (2nd ed.). Springer.
+% --- Fin de comentarios ---
 
 clear; clf;
 
