@@ -34,7 +34,3 @@ Puedes experimentar con estos valores para observar cómo cambian la transmisió
 - **Unidad natural:** el script utiliza unidades atómicas ($$\hbar=1$$, $$m=1/2$$) para simplificar la notación.
 - **Coeficientes:** puede agregar cálculos de coeficientes de transmisión y reflexión expandiendo el script a partir de las amplitudes calculadas.
 - **Generalización:** para múltiples barreras o potenciales arbitrarios, se podría adaptar la construcción de matrices de transferencia.
-
-## Dependencias
-
-- Octave GNU (recomendado: versión 6 o superior).
