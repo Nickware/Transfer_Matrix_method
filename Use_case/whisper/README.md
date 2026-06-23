@@ -35,7 +35,7 @@ En el script puedes modificar:
 
 ## Interpretacion
 
-Este modelo es **conceptual y didactico**, no una teoria sociologica completa. Sirve para:
+Este modelo es conceptual y didactico, no una teoria sociologica completa. Sirve para:
 
 - Pensar en como se propaga el chisme a traves de capas sociales.
 - Identificar donde estan las "barreras" mas fuertes (capas con alta absorcion o reflexion).
