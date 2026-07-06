@@ -32,4 +32,4 @@ Problema de la propagación de ondas sonoras y el cálculo de transmisión y ref
 
 ------
 
-En resumen, sí es posible usar el método de matriz de transferencia para estudiar la propagación de sonido en zonas reales como Engativá y Fontibón, siempre que se adapten los parámetros para reflejar condiciones locales del suelo, edificaciones y atmósfera, y que se complemente con datos específicos del ruido aeroportuario.
+Se propone [implementación](Propuesta_implementacion.md) usar el método de matriz de transferencia para estudiar la propagación de sonido en zonas reales como Engativá y Fontibón, adoptando los parámetros para reflejar condiciones locales del suelo, edificaciones y atmósfera, y que se complemente con datos específicos del ruido aeroportuario.
