@@ -1,6 +1,6 @@
 # Aislamiento y control de ruido ambiental cerca de aeropuertos 
 
-El aislamiento y control de ruido ambiental cerca de aeropuertos se basa en entender cómo el **sonido se propaga en el aire y atraviesa o se refleja en estructuras** (muros, ventanas, fachadas, barreras), y en diseñar sistemas multicapa que disipen parte de esa energía mediante fricción interna, materiales porosos y viscoelásticos.[archdaily+1](https://www.archdaily.com/1029098/environmental-noise-improving-urban-soundscapes-for-well-being)
+El aislamiento y control de ruido ambiental cerca de aeropuertos se basan en entender cómo el **sonido se propaga en el aire y atraviesa o se refleja en estructuras** (muros, ventanas, fachadas, barreras), y en diseñar sistemas multicapa que disipen parte de esa energía mediante fricción interna, materiales porosos y viscoelásticos.[archdaily+1](https://www.archdaily.com/1029098/environmental-noise-improving-urban-soundscapes-for-well-being)
 
 ## Qué se busca cerca de aeropuertos
 
@@ -42,12 +42,12 @@ Es posible armar un modelo conceptual bastante realista de **fachada multicapa**
 
 Se parte de una fachada típica mejorada cerca de un aeropuerto:
 
-- Capa 1: **aire exterior** (medio incidente).  
-- Capa 2: **muro estructural** (ladrillo u hormigón).  
-- Capa 3: **cámara de aire**.  
-- Capa 4: **lana mineral** (material poroso absorbente).  
-- Capa 5: **placa interior** (yeso laminado / drywall).  
-- Capa 6: **aire interior** (habitación receptora).  
+- Capa 1: aire exterior (medio incidente).  
+- Capa 2: muro estructural (ladrillo u hormigón).  
+- Capa 3: cámara de aire.  
+- Capa 4: lana mineral (material poroso absorbente).  
+- Capa 5: placa interior (yeso laminado / drywall).  
+- Capa 6: aire interior (habitación receptora).  
 
 En la práctica, estudios de transmisión a través de muros multicapa usan precisamente este tipo de esquema y lo modelan con TMM, tratando el poroso como fluido equivalente (modelo de Johnson–Allard) y las placas con modelos de placa delgada acoplados al TMM. [sciencedirect](https://www.sciencedirect.com/science/article/pii/S0360132321002146)
 
