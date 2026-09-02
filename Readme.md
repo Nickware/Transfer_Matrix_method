@@ -1,8 +1,8 @@
 # Método de Matriz de Transferencia
 
-El método de matriz de transferencia (transfer matrix method) es una técnica matemática usada principalmente en óptica y acústica para analizar cómo ondas electromagnéticas o acústicas se propagan a través de medios estratificados, es decir, estructuras formadas por varias capas delgadas con diferentes propiedades[^1].
+El método de matriz de transferencia (transfer matrix method) es una técnica matemática usada principalmente en óptica y acústica para analizar cómo las ondas electromagnéticas o acústicas se propagan a través de medios estratificados, es decir, estructuras formadas por varias capas delgadas con diferentes propiedades[^1].
 
-En óptica, este método es especialmente relevante para diseñar recubrimientos antirreflectantes o espejos dieléctricos. La base del método es que, según las ecuaciones de Maxwell, el campo eléctrico y magnético deben ser continuos a través de las interfaces entre capas. Si se conoce el campo en el inicio de una capa, el campo al final puede obtenerse mediante una operación matricial simple. Así, para un sistema con N capas se define una matriz de transferencia para cada capa y la matriz total del sistema es el producto de todas estas matrices individuales.
+En óptica, este método es especialmente relevante para diseñar recubrimientos antirreflectantes o espejos dieléctricos. La base del método es que, según las ecuaciones de Maxwell, los campos eléctrico y magnético deben ser continuos a través de las interfaces entre capas. Si se conoce el campo al inicio de una capa, el campo al final puede obtenerse mediante una operación matricial simple. Así, para un sistema con N capas se define una matriz de transferencia para cada capa y la matriz total del sistema es el producto de todas estas matrices individuales.
 
 Este sistema matricial permite calcular coeficientes globales de reflexión y transmisión que resultan de la interacción compleja de múltiples reflejos y transmisiones internas — que pueden interferir constructivamente o destructivamente, haciendo muy difícil un cálculo directo sin esta formalización[^1][^2].
 
@@ -18,54 +18,40 @@ En resumen, el método de matriz de transferencia es una herramienta poderosa pa
 
 El método de matriz de transferencia es una herramienta poderosa usada para resolver una amplia variedad de problemas físicos, especialmente en sistemas que pueden dividirse en secciones o capas, donde las soluciones pueden combinarse a través de operaciones matriciales. Aquí se resumen los principales problemas físicos que pueden abordarse con este método:
 
-***
+### 1. Mecánica cuántica (Ecuación de Schrödinger 1D)
 
-### 1. **Mecánica cuántica (Ecuación de Schrödinger 1D)**
+- Pozos y barreras cuánticas: determinación de coeficientes de transmisión y reflexión, energías de enlace en pozos finitos, túnel cuántico, resonancias.
+- Pozo cuántico múltiple y superredes: Cálculo de estados ligados y minibandas.
+- Potenciales periódicos: modelado de electrones en sólidos (modelo de Kronig-Penney).
+- Potenciales arbitrarios seccionados: Cualquier potencial que pueda aproximarse por tramos constantes o de solución conocida.[^7][^8][^9]
 
-- **Pozos y barreras cuánticas**: determinación de coeficientes de transmisión y reflexión, energías de enlace en pozos finitos, túnel cuántico, resonancias.
-- **Pozo cuántico múltiple y superredes**: Cálculo de estados ligados y minibandas.
-- **Potenciales periódicos**: Modelado de electrones en sólidos (modelo de Kronig-Penney).
-- **Potenciales arbitrarios seccionados**: Cualquier potencial que pueda aproximarse por tramos constantes o de solución conocida.[^7][^8][^9]
+### 2. Óptica
 
-***
+- Multicapas delgadas: Cálculo de transmisión y reflexión de la luz en pilas de películas dieléctricas (antirreflejos, espejos de Bragg).
+- Cristales fotónicos: Propagación de ondas electromagnéticas en medios periódicamente indexados.
+- Análisis de estructuras ópticas complejas: como recubrimientos y filtros sensibles al ángulo y a la longitud de onda.[^10][^9]
 
-### 2. **Óptica**
+### 3. Acústica
 
-- **Multicapas delgadas**: Cálculo de transmisión y reflexión de la luz en pilas de películas dieléctricas (antirreflejos, espejos de Bragg).
-- **Cristales fotónicos**: Propagación de ondas electromagnéticas en medios periódicamente indexados.
-- **Análisis de estructuras ópticas complejas**: como recubrimientos y filtros sensibles al ángulo y a la longitud de onda.[^10][^9]
+- Propagación de ondas sonoras: Cálculo de transmisión y reflexión en medios con capas de distintas impedancias.
+- Diseño de aislantes acústicos multicapa.
 
-***
+### 4. Matemática y Estadística
 
-### 3. **Acústica**
+- Modelos de cadenas de espines y enlaces: El método se aplica en modelos de Ising y Potts en mecánica estadística, permitiendo el cálculo exacto de funciones de partición, energía libre y correlaciones.[^11][^12][^13]
+- Problemas lineales de ecuaciones diferenciales: Solución de EDOs lineales por secciones.
 
-- **Propagación de ondas sonoras**: Cálculo de transmisión y reflexión en medios con capas de distintas impedancias.
-- **Diseño de aislantes acústicos multicapa**.
+### 5. Física de materiales y sólidos
 
-***
+- Estados electrónicos en materiales estratificados: Análisis de estructuras semiconductoras nanoestructuradas, superredes y heteroestructuras.
+- Fenómenos de transporte cuántico: Cálculo de conductividad y conductancia en nanohilos y puntos cuánticos.[^14][^15]
 
-### 4. **Matemática y Estadística**
+### 6. Otros
 
-- **Modelos de cadenas de espines y enlaces**: El método se aplica en modelos de Ising y Potts en mecánica estadística, permitiendo el cálculo exacto de funciones de partición, energía libre y correlaciones.[^11][^12][^13]
-- **Problemas lineales de ecuaciones diferenciales**: Solución de EDOs lineales por secciones.
+- Problemas de polimerización: como el problema del monómero-dímero en física estadística.[^16][^12]
+- Propagación en sistemas disipativos o abiertos: Extensión a ecuaciones tipo Lindblad en sistemas cuánticos abiertos.[^11]
 
-***
-
-### 5. **Física de materiales y sólidos**
-
-- **Estados electrónicos en materiales estratificados**: Análisis de estructuras semiconductoras nanoestructuradas, superredes y heteroestructuras.
-- **Fenómenos de transporte cuántico**: Cálculo de conductividad y conductancia en nanohilos y puntos cuánticos.[^14][^15]
-
-***
-
-### 6. **Otros**
-
-- **Problemas de polimerización**: como el problema del monómero-dímero en física estadística.[^16][^12]
-- **Propagación en sistemas disipativos o abiertos**: Extensión a ecuaciones tipo Lindblad en sistemas cuánticos abiertos.[^11]
-
-***
-
-#### **Ventajas principales**
+### Ventajas principales
 
 - Permite obtener soluciones exactas o muy precisas de transmisión y reflexión donde métodos aproximados serían menos eficientes.
 - Es simple de implementar numéricamente en 1D y resulta útil en educación, investigación y simulación de dispositivos.
