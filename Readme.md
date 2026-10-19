@@ -14,7 +14,7 @@ El contenido está organizado por área y combina scripts en Python y MATLAB/Oct
 | Mecánica cuántica | Ejemplos MATLAB/Octave para la ecuación de Schrödinger 1D y superredes. | [Documentación](Quantum_Mechanics/Readme.md) · [Barrera 1D](Quantum_Mechanics/Schrödinger_1D.m) · [Superred](Quantum_Mechanics/Superlattice.m) |
 | Acústica aplicada | Documentación sobre propagación sonora y una propuesta para organizar una implementación reutilizable. | [Documentación](Acustic/Readme.md) · [Propuesta](Acustic/Propuesta_implementacion.md) |
 | Caso: fachada aeroportuaria | Modelo Octave de una fachada multicapa; calcula pérdida por transmisión y estima niveles interiores con un espectro ilustrativo. Incluye resultados CSV. | [Descripción](Use_case/Airport/Readme.md) · [Guía y alcance](Use_case/Airport/fachada/README.md) · [Script](Use_case/Airport/fachada/fachada_tmm_aeropuerto.m) |
-| Caso conceptual: propagación de un chisme | Analogía didáctica inspirada en el TMM; no es un modelo físico ni sociológico validado. | [Descripción](Use_case/whisper/README.md) · [Script](Use_case/whisper/chisme_capas_tmm.m) |
+| Caso conceptual: propagación de un chisme | Compara escenarios base y de moderación mediante flujos de transmisión, filtrado y contra-relato; no es un modelo social validado. | [Descripción](Use_case/whisper/README.md) · [Script](Use_case/whisper/chisme_capas_tmm.m) |
 
 ## Primeros pasos
 

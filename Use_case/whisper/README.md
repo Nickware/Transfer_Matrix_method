@@ -1,59 +1,52 @@
-# Modelo conceptual de propagación de chisme por capas (análoga al TMM) (en desarrollo)
+# Modelo conceptual de propagación de chisme por capas
 
-Este script de Octave implementa un **modelo conceptual** de propagación de un chisme, injuria o calumnia a través de capas sociales, inspirado en la lógica del **método de matriz de transferencia (TMM)** usado en acústica y física.
+Este ejemplo de Octave compara dos cascadas hipotéticas de propagación: un escenario base y otro con moderación. Usa la idea de capas del **método de matriz de transferencia (TMM)** como analogía; no aplica matrices físicas ni es un modelo social validado.
 
 ## Idea general
 
-En lugar de ondas sonoras, el modelo trabaja con **intensidad de chisme** que se propaga de una capa social a la siguiente:
+El modelo trabaja con una intensidad normalizada entre 0 y 1 que avanza por estas transiciones:
 
-- Emisor inicial → Amigos/cercanos → Redes sociales → Opinión pública → Consecuencias públicas
+- Emisor → Amigos → Redes → Opinión pública → Consecuencias
 
-Cada capa puede:
+En cada transición, la intensidad entrante se reparte entre:
 
-- Transmitir el chisme (pasar a la siguiente capa),
-- Absorber (filtrar, dudar, corregir, no repetir),
-- Reflejar (generar contrarrelato, desmentido, defensa).
+- **Transmisión (`T`)**: pasa al siguiente nodo.
+- **Filtrado (`A`)**: se detiene por duda, verificación o decisión de no compartir.
+- **Contra-relato (`R`)**: parte asociada a una respuesta o desmentido.
+- **Sin propagación**: intensidad restante que tampoco avanza.
 
-Esto es análogo a cómo una capa acústica transmite, absorbe y refleja una onda sonora.
+Para cada etapa se exige `T + A + R <= 1`; el script comprueba los coeficientes antes de simular.
 
-## Parámetros principales
+## Escenarios y parámetros
 
-En el script puedes modificar:
+El script compara dos conjuntos de coeficientes, definidos en `T_case`, `A_case` y `R_case`:
 
-- `T`: probabilidad de transmisión por capa (0..1). Valores altos = chisme se propaga fácilmente.
-- `A`: probabilidad de absorción por capa (0..1). Valores altos = la capa filtra mejor el chisme.
-- `R`: probabilidad de reflexión por capa (0..1). Valores altos = mayor chance de desmentido o contrarrelato.
-- `intensity0`: intensidad inicial del chisme (0..1).
+- `Base`: cascada de referencia.
+- `Moderacion`: cascada hipotética con menor transmisión y mayor filtrado/contra-relato en algunas etapas.
+- `intensity0`: intensidad inicial normalizada; por defecto es `1.0`.
+
+Los valores son supuestos ilustrativos, no probabilidades medidas. `R` se contabiliza como contra-relato, pero el script no modela cómo se difunde ni si logra corregir a quienes recibieron el mensaje.
 
 ## Salidas
 
-- Gráfico de intensidad del chisme por capa.
-- Gráfico de transmisión, absorción y reflexión por capa.
-- Esquema conceptual con flechas que muestran los flujos.
-- Resultados numéricos en consola.
-- Archivo CSV con tabla de resultados.
+- Gráfico que compara la intensidad que alcanza cada nodo en ambos escenarios.
+- Barras apiladas con el balance de flujos por etapa para el escenario base.
+- Resumen numérico en consola, incluida la intensidad en consecuencias.
+- `output/chisme_capas_resultados.csv`, con una fila por escenario y transición.
 
-## Interpretacion
+## Ejecución
 
-Este modelo es conceptual y didáctico, no una teoría sociológica completa. Sirve para:
+Con Octave instalado, desde la raíz del repositorio:
 
-- Pensar en cómo se propaga el chisme a través de capas sociales.
-- Identificar dónde están las "barreras" más fuertes (capas con alta absorción o reflexión).
-- Diseñar estrategias de intervención:
-  - reducir transmisión (educación, normas, sanciones),
-  - aumentar absorción (cultura de no chismear, pensamiento crítico),
-  - aumentar la reflexión (desmentidos rápidos, contranarrativas).
+```bash
+cd Use_case/whisper
+octave chisme_capas_tmm.m
+```
 
-## Aplicación a estudios sociales
+El script crea `output` si no existe y escribe allí el CSV. También abre las gráficas.
 
-Puedes usar este modelo para:
+## Interpretación y límites
 
-- Estudiar casos de difamación, cancelación, estigma social.
-- Analizar cómo el ruido social (chismes) se relaciona con el ruido físico (ruido de aeropuerto, por ejemplo).
-- Diseñar encuestas o entrevistas que muestren cómo las personas perciben la propagación de chismes en su comunidad.
+El resultado permite comparar cómo cambian las intensidades al modificar los coeficientes supuestos. No predice la difusión real de rumores ni representa personas, redes, tiempos, repetición, credibilidad, diferencias de audiencia o la influencia efectiva de una corrección.
 
-## Limitaciones
-
-- No captura motivaciones profundas, poder, desigualdad, género, etnia.
-- No explica subjetividad ni experiencia vivida.
-- Es una metáfora matemática simplificada, no una teoría completa.
+Úsalo como ejercicio de balance de flujos y análisis de escenarios, no para evaluar personas, comunidades o estrategias reales sin datos y un modelo validado.
