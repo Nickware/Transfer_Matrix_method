@@ -1,93 +1,39 @@
 # Método de Matriz de Transferencia
 
-El método de matriz de transferencia (transfer matrix method) es una técnica matemática usada principalmente en óptica y acústica para analizar cómo las ondas electromagnéticas o acústicas se propagan a través de medios estratificados, es decir, estructuras formadas por varias capas delgadas con diferentes propiedades[^1].
+Este repositorio reúne ejemplos educativos del **método de matriz de transferencia (TMM)** aplicados a sistemas estratificados. En términos generales, cada capa se representa mediante una matriz y la respuesta del conjunto se obtiene al multiplicarlas en orden. Los ejemplos calculan, según el dominio, reflexión, transmisión, propagación de ondas o bandas de energía.
 
-En óptica, este método es especialmente relevante para diseñar recubrimientos antirreflectantes o espejos dieléctricos. La base del método es que, según las ecuaciones de Maxwell, los campos eléctrico y magnético deben ser continuos a través de las interfaces entre capas. Si se conoce el campo al inicio de una capa, el campo al final puede obtenerse mediante una operación matricial simple. Así, para un sistema con N capas se define una matriz de transferencia para cada capa y la matriz total del sistema es el producto de todas estas matrices individuales.
+El contenido está organizado por área y combina scripts en Python y MATLAB/Octave con documentación y propuestas. **No es una única biblioteca ni todos los documentos describen código ya implementado**; consulta cada README para conocer las hipótesis y requisitos de cada ejemplo.
 
-Este sistema matricial permite calcular coeficientes globales de reflexión y transmisión que resultan de la interacción compleja de múltiples reflejos y transmisiones internas — que pueden interferir constructivamente o destructivamente, haciendo muy difícil un cálculo directo sin esta formalización[^1][^2].
+## Mapa del repositorio
 
-El formalismo se basa en expresar el campo dentro de cada capa como la suma de ondas que viajan en ambas direcciones (hacia adelante y hacia atrás), y luego usar una matriz 2x2 que relaciona el campo eléctrico y su derivada antes y después de la capa. Por ejemplo, para una capa con índice de refracción n y grosor d, la matriz tiene entradas relacionadas con funciones trigonométricas del número de onda en la capa y su grosor.
+| Área | Contenido actual | Punto de entrada |
+| --- | --- | --- |
+| Base acústica | Ejemplo Python de TMM para medios acústicos multicapa. | [Documentación](Base/Readme.md) · [Código](Base/multilayer_media.py) |
+| Óptica | Ejemplos de elipsometría, reflexión, transmisión y vector de Poynting; varios usan la biblioteca `tmm`. | [Documentación](Optics/Readme.md) · [Scripts](Optics/) |
+| Geofísica | Simulación Python de propagación sísmica en capas terrestres. | [Documentación](Geophysics/Readme.md) · [Código](Geophysics/seismic_wave.py) |
+| Mecánica cuántica | Ejemplos MATLAB/Octave para la ecuación de Schrödinger 1D y superredes. | [Documentación](Quantum_Mechanics/Readme.md) · [Barrera 1D](Quantum_Mechanics/Schrödinger_1D.m) · [Superred](Quantum_Mechanics/Superlattice.m) |
+| Acústica aplicada | Documentación sobre propagación sonora y una propuesta para organizar una implementación reutilizable. | [Documentación](Acustic/Readme.md) · [Propuesta](Acustic/Propuesta_implementacion.md) |
+| Caso: fachada aeroportuaria | Modelo Octave de una fachada multicapa; calcula pérdida por transmisión y estima niveles interiores con un espectro ilustrativo. Incluye resultados CSV. | [Descripción](Use_case/Airport/Readme.md) · [Guía y alcance](Use_case/Airport/fachada/README.md) · [Script](Use_case/Airport/fachada/fachada_tmm_aeropuerto.m) |
+| Caso conceptual: propagación de un chisme | Analogía didáctica inspirada en el TMM; no es un modelo físico ni sociológico validado. | [Descripción](Use_case/whisper/README.md) · [Script](Use_case/whisper/chisme_capas_tmm.m) |
 
-Además de la óptica, el método se adapta a la acústica para calcular propiedades de transmisión y reflexión en estructuras de capas para ondas sonoras, usando variables adecuadas como desplazamiento y estrés en lugar de campos eléctricos y magnéticos[^1][^6].
+## Primeros pasos
 
-En física cuántica y en el estudio de sistemas cuánticos abiertos también se usa una versión del método de matrices de transferencia para simplificar el cálculo de la evolución temporal de correladores y resolver modelos complejos, evitando descomposiciones espectrales complicadas[^5].
+No hay una instalación única para todo el repositorio. Los ejemplos Python requieren normalmente `numpy` y `matplotlib`; los scripts ópticos que importan `tmm` necesitan además esa biblioteca. Revisa el README del área antes de ejecutar un ejemplo.
 
-En resumen, el método de matriz de transferencia es una herramienta poderosa para modelar fenómenos de propagación ondulatoria en medios estratificados, simplificando el cálculo de reflección y transmisión al convertir la propagación a través de múltiples capas en un producto de matrices simples[^1][^2][^5].
+Por ejemplo, desde la raíz del repositorio:
 
-# Empleo del Método de Matriz de Transferencia
+```bash
+python Base/multilayer_media.py
+python Geophysics/seismic_wave.py
+```
 
-El método de matriz de transferencia es una herramienta poderosa usada para resolver una amplia variedad de problemas físicos, especialmente en sistemas que pueden dividirse en secciones o capas, donde las soluciones pueden combinarse a través de operaciones matriciales. Aquí se resumen los principales problemas físicos que pueden abordarse con este método:
+Para el modelo de fachada, con Octave instalado, ejecútalo desde su carpeta para que las gráficas y el CSV se escriban en el directorio `output` previsto:
 
-### 1. Mecánica cuántica (Ecuación de Schrödinger 1D)
+```bash
+cd Use_case/Airport/fachada
+octave fachada_tmm_aeropuerto.m
+```
 
-- Pozos y barreras cuánticas: determinación de coeficientes de transmisión y reflexión, energías de enlace en pozos finitos, túnel cuántico, resonancias.
-- Pozo cuántico múltiple y superredes: Cálculo de estados ligados y minibandas.
-- Potenciales periódicos: modelado de electrones en sólidos (modelo de Kronig-Penney).
-- Potenciales arbitrarios seccionados: Cualquier potencial que pueda aproximarse por tramos constantes o de solución conocida.[^7][^8][^9]
+## Alcance
 
-### 2. Óptica
-
-- Multicapas delgadas: Cálculo de transmisión y reflexión de la luz en pilas de películas dieléctricas (antirreflejos, espejos de Bragg).
-- Cristales fotónicos: Propagación de ondas electromagnéticas en medios periódicamente indexados.
-- Análisis de estructuras ópticas complejas: como recubrimientos y filtros sensibles al ángulo y a la longitud de onda.[^10][^9]
-
-### 3. Acústica
-
-- Propagación de ondas sonoras: Cálculo de transmisión y reflexión en medios con capas de distintas impedancias.
-- Diseño de aislantes acústicos multicapa.
-
-### 4. Matemática y Estadística
-
-- Modelos de cadenas de espines y enlaces: El método se aplica en modelos de Ising y Potts en mecánica estadística, permitiendo el cálculo exacto de funciones de partición, energía libre y correlaciones.[^11][^12][^13]
-- Problemas lineales de ecuaciones diferenciales: Solución de EDOs lineales por secciones.
-
-### 5. Física de materiales y sólidos
-
-- Estados electrónicos en materiales estratificados: Análisis de estructuras semiconductoras nanoestructuradas, superredes y heteroestructuras.
-- Fenómenos de transporte cuántico: Cálculo de conductividad y conductancia en nanohilos y puntos cuánticos.[^14][^15]
-
-### 6. Otros
-
-- Problemas de polimerización: como el problema del monómero-dímero en física estadística.[^16][^12]
-- Propagación en sistemas disipativos o abiertos: Extensión a ecuaciones tipo Lindblad en sistemas cuánticos abiertos.[^11]
-
-### Ventajas principales
-
-- Permite obtener soluciones exactas o muy precisas de transmisión y reflexión donde métodos aproximados serían menos eficientes.
-- Es simple de implementar numéricamente en 1D y resulta útil en educación, investigación y simulación de dispositivos.
-
-<div style="text-align: center">Referencias</div>
-
-[^1]: https://en.wikipedia.org/wiki/Transfer-matrix_method_(optics)
-
-[^2]: https://www.youtube.com/watch?v=XuSxmb9-viY
-
-[^3]: https://empossible.net/wp-content/uploads/2020/05/Lecture-TMM-Using-Scattering-Matrices.pdf
-
-[^4]: https://www.iue.tuwien.ac.at/phd/kirchauer/node75.html
-
-[^5]: https://arxiv.org/html/2501.13560v1
-
-[^6]: https://pubmed.ncbi.nlm.nih.gov/25669277/
-
-[^7]: https://mc.sbm.org.br/wp-content/uploads/sites/9/sites/9/2024/02/59-Article7.pdf
-
-[^8]: https://phys.libretexts.org/Bookshelves/Quantum_Mechanics/Quantum_Mechanics_III_(Chong)/06:_Appendices/6.02:_B-_The_Transfer_Matrix_Method
-
-[^9]: https://www.sciencedirect.com/topics/physics-and-astronomy/transfer-matrix-method
-
-[^10]: https://www.scribd.com/document/845091089/Exercise3-Transfer-Matrix-Method
-
-[^11]: https://ocw.mit.edu/courses/8-334-statistical-mechanics-ii-statistical-physics-of-fields-spring-2014/63a2343dc24d8920e481ae5597183948_MIT8_334S14_pset4.pdf
-
-[^12]: https://arxiv.org/html/2501.13560v1
-
-[^13]: https://link.springer.com/chapter/10.1007/978-3-662-06390-3_34
-
-[^14]: https://link.aps.org/pdf/10.1103/PhysRevB.50.2241
-
-[^15]: https://link.aps.org/doi/10.1103/PhysRevB.50.2241
-
-[^16]: https://pubs.aip.org/aip/jmp/article/8/12/2339/234065/Solution-of-the-Dimer-Problem-by-the-Transfer
-
-[^17]: https://link.aps.org/doi/10.1103/PhysRevB.100.144311
+Los scripts son ejemplos y prototipos independientes, con supuestos propios de cada problema. En particular, el caso aeroportuario usa un espectro ilustrativo y simplificaciones como incidencia normal; no sustituye mediciones, una evaluación normativa ni un modelo acústico completo. Para interpretar resultados, consulta la documentación del proyecto correspondiente.
